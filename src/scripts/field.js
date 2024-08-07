@@ -5,6 +5,6 @@ export const addPlant = (seed) => {
     return plantsInField
 }
 
-export const usePlant = () => {
+export const usePlants = () => {
    return plantsInField.map(plant => ({...plant}))
 }
