@@ -13,7 +13,8 @@ plantSeeds(yearlyPlan);
 
 const usePlantsVariable= usePlants();
 
-const harvestedPlants = harvestPlants(usePlantsVariable);
+const harvestedPlants = harvestPlants(usePlantsVariable).sort((a,b)=> 
+    a.type.localeCompare(b.type));
 
 
 
