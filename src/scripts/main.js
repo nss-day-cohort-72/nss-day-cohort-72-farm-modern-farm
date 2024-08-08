@@ -13,5 +13,5 @@ plantSeeds(yearlyPlan);
 
 const usePlantsVariable= usePlants();
 
-const harvestPlants = harvestPlants(usePlantsVariable);
+// const harvestedPlants = harvestPlants(usePlantsVariable);
 
