@@ -1,5 +1,3 @@
-import { usePlants } from "./field.js"
-
 export const harvestPlants = (plants) => {      //from Field module usePlant() that returns a copy of the array of plants
     const seeds = []
   
