@@ -1,8 +1,5 @@
-import { createPlan } from "./plan.js";
-import { usePlants } from "./field.js";
-import { plantSeeds } from "./tractor.js";
-import { harvestPlants} from "./harvester.js";
-
+import { createPlan } from "./plan.js"
+import { addPlant, usePlants } from "./field.js";
 
 
 const yearlyPlan = createPlan();
