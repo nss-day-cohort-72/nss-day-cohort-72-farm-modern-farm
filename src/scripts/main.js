@@ -40,4 +40,4 @@ const plantCounts = harvestedPlants.reduce((prev,curr) => {
 
 
 
-Catalog(plantCounts);
+Catalog(harvestedPlants);
