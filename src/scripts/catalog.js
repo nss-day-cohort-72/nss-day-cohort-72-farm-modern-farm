@@ -6,7 +6,7 @@ export const Catalog = (harvestedPlant) => {
     harvestedPlant.forEach (plant => {
         const section = document.createElement('section');
         section.classList.add('plant');
-        section.textContent = `${plant.type}`;
+        section.textContent = `${plant.type} quantity: ${plant.quantity}`;
         container.appendChild(section);
 
 
