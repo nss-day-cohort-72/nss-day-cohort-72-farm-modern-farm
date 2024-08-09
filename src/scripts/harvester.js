@@ -1,18 +1,26 @@
-export const harvestPlants = (plants) => {      //from Field module usePlant() that returns a copy of the array of plants
-    const seeds = []
-  
+let currentId = 1; // Initialize a variable to keep track of the unique ID
+
+export const harvestPlants = (plants) => {
+    const seeds = [];
+
     for (const plant of plants) {
+        let numberOfSeedsToAdd;
+
         if (plant.type === "Corn") {
-            const numberOfSeedsToAdd = Math.floor(plant.output /2)
-            for (let i = 0; i < numberOfSeedsToAdd; i++) {
-                seeds.push(plant);
-            }
-        }else {
-            for (let i = 0; i <plant.output; i++){
-                seeds.push(plant)
-            }
+            numberOfSeedsToAdd = Math.floor(plant.output / 2);
+        } else {
+            numberOfSeedsToAdd = plant.output;
+        }
+
+        for (let i = 0; i < numberOfSeedsToAdd; i++) {
+            // Create a new object for each seed with a unique ID
+            const harvestedSeed = {
+                ...plant,
+                id: currentId++
+            };
+            seeds.push(harvestedSeed);
         }
     }
 
-    return seeds
-}
+    return seeds;
+};
